@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="with=device-width, initial-scale=1.0">
+    <title>ECS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+</head>
+<body>
+    <section class="tub-header">
+        <nav> 
+            <a href="index.html"><img src="images\logo.jpg" width="129" height="54"></a>
+            <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="ad.html">ADMISSION</a></li>
+                    <li><a href="index.html#acd">ACADEMICS</a></li>
+                    <li><a href="activities.html">ACTIVITIES</a></li>
+                    <li><a href="events.html">EVENTS</a></li>
+                    <li><a href="exam.html">EXAMINATION</a></li>
+                    <li><a href="teams.html">TEAMS</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>ELECTRONICS & COMPUTER SCIENCE</h1>
+    </section>
+
+    <style>
+    
+    .footer{
+    width: 100%;
+    text-align: center;
+    margin-top: 303%;
+    padding: 1px 0;
+    max-height: 24vh;
+    background-color: lightgray;
+    background-position: center;
+    background-size: cover;
+    position: relative;  
+}
+        .tub-header{
+    height: 50vh;
+        width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images/ecs.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    }
+    .tub-header h1{
+           margin-top: 100px;
+    }
+    * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;  
+}
+.main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+.menu {
+    width: 20%;
+    background-color: grey;
+    position: sticky;
+}
+
+#academics {
+    color: white;
+    font-size: 30px;
+    letter-spacing: 4px;
+    padding: 15px;
+    background-color: grey;
+    position: sticky;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: list-item;
+    padding: 20px;
+}
+.menu a:hover {
+    background-color: lightgrey;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.body {
+    width: 900px;
+    margin-left: auto;
+    margin-right: auto;    
+}
+.body h1 {
+    margin-top: 50px;
+    color: navy;
+    letter-spacing: 4px;
+    padding: 20px;
+    background-color: lightblue;
+}
+section {
+    height: 100vh;
+    padding: 30px;
+}
+
+#overview {
+    background: lightgrey;
+}
+
+#HOD desk {
+    background: white;
+}
+
+#Faculty {
+    background: lightgrey;
+}
+.faculty-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1000px; /* Adjust this to control the maximum width */
+    margin: 0 auto; /* Center the container on the page */
+}
+
+
+.image {
+    flex: 0 0 calc(33.333% - 20px); /* 33.333% width with some margin */
+    margin: 10px; /* Add margin between each division */
+    text-align: center; /* Center content within each division */
+}
+
+#Syllabus {
+    background: white;
+}
+
+
+#TimeTable {
+    background: lightgrey;
+}
+
+#Attendace {
+    background: white;
+}
+
+#Result {
+    background: white;
+}
+h3 {
+    text-align: left;
+    color: black;
+    font-size: 30px;
+}
+table {
+    width: 80%;
+}
+
+th {
+    text-align: center;
+    background-color: darkorange;
+}
+td {
+    font-weight: bold;
+    background-color: lightgray;
+}
+table, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td, th {
+    padding: 5px;
+}
+    
+    </style>
+
+    <section>
+        <div class="main">
+            <div class="menu">
+                <h2 id="academics">ACADEMICS</h2>
+                <a href="#Overview">Overview</a>
+                <a href="#HOD desk">HOD Desk</a>
+                <a href="#Faculty">Faculty</a>
+                <a href="#Syllabus">Syllabus/Experiments</a>
+                <a href="#TimeTable">TimeTable</a>
+                <a href="#Attendance">Attendance</a>
+                <a href="#Result">Result</a>
+            </div>
+        
+            <div class="main-content">
+                <div class="body">
+                </div>
+                <div id="Overview">
+                    <img src="images/over.jpg" width="500" height="600">
+                    <p>An Electronics and Computer Science Department is a crucial academic unit within a university or educational
+                        institution that focuses on teaching, research, and innovation in the fields of electronics engineering and
+                        computer science. Electronics and computer science departments typically have well-equipped laboratories for
+                        hands-on learning and research. These labs may focus on digital electronics, microelectronics, computer 
+                        programming, and networking. Specialized facilities may include clean rooms for semiconductor fabrication, 
+                        robotics labs, and computer clusters for high-performance computing.</p>
+                </div>
+<!-----HOD DESK-->
+                <div id="HOD desk">
+                    <h1>HOD'S DESK</h1>
+                    <img src="images/hod.jpg">
+                    <h2>Dr.Kavita Bani</h2><h4>(Ph.D in EXTC, M.E in EXTC, B.E in Instru. & Control)</h4>
+                    <p>Welcome to the Department of Electronics & Computer Science at Atharva College of Engineering (ACE), Mumbai. 
+                        The department is located in a capacious environment with state of art facilities & highly qualified faculty. 
+                        Electronics & Computer Science is an ever evolving field that has benefitted the progress of society.
+                        In the 21st Century, Electronics Industry has made a tremendous impact on our lives. Electronic gadgets 
+                        have become an integral part of our lifestyle. In today’s fast-changing world, a new generation of Electronics 
+                        Engineers needs to be developed to provide environment friendly solutions to the challenges faced due to 
+                        limited resources. The department has a dedicated faculty to develop all round Electronics & Computer Science 
+                        graduates with highly professional & Ethical values. The department works with the objective of addressing the 
+                        challenges faced by the Academia, Industry & the Society. The department endeavors to create a conducive for 
+                        the students to flourish and aid them in their overall growth, making them ready to be successful and competent 
+                        in the real world.
+                        I, Prof. Kavita Piyush Bani, (I/N) Head of the Department, once again welcome you to the Department of 
+                        Electronics Engineering as an undergraduate student & we would be delighted to be a part of your journey. 
+                        The department is always ready to receive valuable inputs to aid us to propagate & hence is open to all 
+                        Stakeholders’ to be part of our growth.</p>
+                </div>
+                <div class="container">
+                    <div class="box-container">   
+                        <div class="box">
+                            <img src="images/studex.jpg" alt="">
+                            <h3>ACADEMIC EXCELLENCE</h3>
+                        </div>
+                        <div class="box">
+                            <img src="images/facmag.jpg" alt="">
+                            <h3>FACULTY MANAGEMENT</h3>
+                        </div>
+                        <div class="box">
+                            <img src="images/stud.jpg" alt="">
+                            <h3>STUDENT SUCCESS</h3>
+                        </div>
+                    </div>
+                </div>
+
+<!----FACULTY-->
+
+<section id="Faculty" class="faculty-container">
+    <div class="image">
+        <img id="pic" src="images/ce.jpg">
+        <h4>Ms.Prajakta Borole</h4>
+        <p>Asst.Professor</p>
+        <h5>PhD(pursuing) M.E.(EXTC) B.Tech(ECE)</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/coa.jpg">
+        <h4>Ms.Natasha Naik</h4>
+        <p>Asst.Professor</p>
+        <h5>PhD(Pursuing) M.Tech(DEC) B.E.(ECE)</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/mm.jpg">
+        <h4>Ms.Surabhi Laharia</h4>
+        <p>Asst.Professor</p>
+        <h5>M.E.(CCN) B.E.(ECE)</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/wt.jpg">
+        <h4>Ms.Snehal Bhelkar</h4>
+        <p>Asst.Professor</p>
+        <h5>M.Tech(EXTC) B.E.(EXTC)</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/dsat.jpg">
+        <h4>Ms.Neha Pagaria</h4>
+        <p>Asst.Professor</p>
+        <h5>M.Tech(DC) B.Tech(EXTC)</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/sir.jpg">
+        <h4>Mr.Nilesh Shimpi</h4>
+        <p>Asst.Professor</p>
+        <h5>M.Tech(ES)  B.E.(EXTC)</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/sir2.jpg">
+        <h4>Mr.Niranjan Samudre</h4>
+        <p>Asst.Professor</p>
+        <h5>PhD(ECE) M.E.(Instru) B.E.(Instru)</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/se.jpg">
+        <h4>Ms.Sneha Burnase</h4>
+        <p>Asst.Professor</p>
+        <h5>B.E. EXTC ,M.TECH EXTR ENGG ,PHD EXTC PERSUING</h5>
+    </div>
+    <div class="image">
+        <img id="pic" src="images/maam.jpg">
+        <h4>Ms.Rupali Tirale</h4>
+        <p>Asst.Professor</p>
+        <h5>Phd Pursuing, M.E.(EXTC), B.E.(EXTC)</h5>
+    </div>
+</section>
+
+
+
+<!----SYLLABUS-->
+<section>
+                <div id="Syllabus">
+                    <h1>SYLLABUS</h1>
+                    <h5></h5>
+                    <p>Semester 3 & 4</p>
+                    <a href="sem34.pdf">ECS_SE(REV-19)</a>
+                    <p>Semester 5 & 6</p>
+                    <a href="sem56.pdf">ECS_TE(REV-19)</a>
+                    <p>Semester 7 & 8</p>
+                    <a href="sem78.pdf">ECS_BE(REV-19)</a>
+                    </div>
+                    </section>
+
+<!----TIMETABALE-->
+               <section>
+                <div id="TimeTable">
+                    <h1>TIMETABLE</h1>
+                    <a href="TimeTable.pdf">Master Timetable-SE TE BE</a><br> 
+                    <img src="images/tt.jpg" width="600" height="399">
+                    <img src="images/tt2.jpg" width="600" height="212">
+                    </div>
+                </section>
+
+<!----ATTENDANCE-->
+                
+
+<!----RESULT-->
+<section>
+<div id="Attendance">
+    <h3>Roll Numbers List</h3>
+    <a href="ECS_Attendance.xlsx">Attendance of Students- Sem5</a>
+
+    <h3>Defaulters List</h3>
+    <table>
+        <tr>
+            <th>Roll Number</th>
+            <th>Name</th>
+            <th>Present</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Charlie Boroc</td>
+            <td>11</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Eliza Brandae</td>
+            <td>14</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Atharva Chavan</td>
+            <td>8</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Tripura Dange</td>
+            <td>10</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>13</td>
+            <td>Gary Howard</td>
+            <td>13</td>
+            <td>30</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>Anika Lynch</td>
+            <td>10</td>
+            <td>30</td>
+        </tr>
+    </table>
+</div>
+                <div id="Result">
+                    <h3>Toppers List Odd Semester</h3>
+                    <table>
+                    <tr>
+                        <th colspan="3">SEM 3 TOPPERS</th>
+                    </tr>
+                    <tr>
+                        <th>Name of student</th>
+                        <th>CGPA</th>
+                        <th>Position</th>
+                    </tr>
+                    <tr>
+                        <td>Shamit Shetty</td>
+                        <td>9.75</td>
+                        <td>First</td>
+                    </tr>
+                    <tr>
+                        <td>Vedika Nemane</td>
+                        <td>8.85</td>
+                        <td>Second</td>
+                    </tr>
+                    <tr>
+                        <td>Tejas Jadhav</td>
+                        <td>8.75</td>
+                        <td>Third</td>
+                    </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="3">SEM 5 TOPPERS</th>
+                        </tr>
+                        <tr>
+                            <th>Name of student</th>
+                            <th>CGPA</th>
+                            <th>Position</th>
+                        </tr>
+                        <tr>
+                            <td>Atithi Zimbar</td>
+                            <td>8.5</td>
+                            <td>First</td>
+                        </tr>
+                        <tr>
+                            <td>Sapna Datta</td>
+                            <td>8.36</td>
+                            <td>Second</td>
+                        </tr>
+                        <tr>
+                            <td>Dineshchandra Joshi</td>
+                            <td>8.05</td>
+                            <td>Third</td>
+                        </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="3">SEM 7 TOPPERS</th>
+                            </tr>
+                            <tr>
+                                <th>Name of student</th>
+                                <th>CGPA</th>
+                                <th>Position</th>
+                            </tr>
+                            <tr>
+                                <td>Anish Patil</td>
+                                <td>9.14</td>
+                                <td>First</td>
+                            </tr>
+                            <tr>
+                                <td>Aditya Rathod</td>
+                                <td>8.57</td>
+                                <td>Second</td>
+                            </tr>
+                            <tr>
+                                <td>Saloni Naik</td>
+                                <td>8.43</td>
+                                <td>Third</td>
+                            </tr>
+                            </table>
+
+<!-------EVEN SEMESTER------->
+
+                            <h3>Toppers List Even Semester</h3>
+                    <table>
+                    <tr>
+                        <th colspan="3">SEM 4 TOPPERS</th>
+                    </tr>
+                    <tr>
+                        <th>Name of student</th>
+                        <th>CGPA</th>
+                        <th>Position</th>
+                    </tr>
+                    <tr>
+                        <td>Pooja Mestry</td>
+                        <td>9.5</td>
+                        <td>First</td>
+                    </tr>
+                    <tr>
+                        <td>shreetha Konda</td>
+                        <td>9.5</td>
+                        <td>First</td>
+                    </tr>
+                    <tr>
+                        <td>sayli Kadam</td>
+                        <td>9.5</td>
+                        <td>Fisrt</td>
+                    </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <th colspan="3">SEM 6 TOPPERS</th>
+                        </tr>
+                        <tr>
+                            <th>Name of student</th>
+                            <th>CGPA</th>
+                            <th>Position</th>
+                        </tr>
+                        <tr>
+                            <td>Moksh Patel</td>
+                            <td>9.84</td>
+                            <td>First</td>
+                        </tr>
+                        <tr>
+                            <td>Harshada Patil</td>
+                            <td>9.8</td>
+                            <td>Second</td>
+                        </tr>
+                        <tr>
+                            <td>Snehanjali Karande</td>
+                            <td>9.68</td>
+                            <td>Third</td>
+                        </tr>
+                        </table>
+                        <table>
+                            <tr>
+                                <th colspan="3">SEM 8 TOPPERS</th>
+                            </tr>
+                            <tr>
+                                <th>Name of student</th>
+                                <th>CGPA</th>
+                                <th>Position</th>
+                            </tr>
+                            <tr>
+                                <td>Ronak Bhardwaj</td>
+                                <td>10</td>
+                                <td>First</td>
+                            </tr>
+                            <tr>
+                                <td>Brandon Saldanha</td>
+                                <td>10</td>
+                                <td>First</td>
+                            </tr>
+                            <tr>
+                                <td>Chinmay Mohanty</td>
+                                <td>10</td>
+                                <td>First</td>
+                            </tr>
+                            </table>            
+                        </div>    
+            </div>
+        </div>  
+    </section>     
+    </section>
+
+
+    
+   
+
+    <section class="footer">
+        <h4>ABOUT US</h4>
+        <p>Approved by AICTE; Recognized by Government of Maharashtra; Affiliated to University of Mumbai - Estd. 1999 - 2000; NAAC 
+            Accredited<br>ISO 2100:2018 ISO 14001:2015 ISO 9001:2015</p>
+        <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="orangered" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="orangered" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="orangered" class="bi bi-instagram" viewBox="0 0 16 16">
+                <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="orangered" class="bi bi-twitter" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="orangered" class="bi bi-youtube" viewBox="0 0 16 16">
+                <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z"/>
+              </svg>
+        </div>
+        <p><a href="contact.html">CONTACT US</a></p>
+    </section>
+    
+    <!------Javascript for toggle menu------>
+    <script>
+        var navLinks = document.getElementById("nav-Links");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
